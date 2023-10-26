@@ -43,7 +43,12 @@ class Tray:
 
         self.slider = Gtk.Scale (
             orientation = orientation,
-            adjustment  = Gtk.Adjustment (int (dim), 0, 100, 5, 10, 0)
+            adjustment  = Gtk.Adjustment (value = int (dim),
+                                          lower = 0,
+                                          upper = 100,
+                                          step_increment = 5,
+                                          page_increment = 10,
+                                          page_size = 0)
         )
         self.slider.set_value (dim)
         self.slider.set_draw_value (True)
@@ -94,6 +99,9 @@ class Tray:
         )
 
     def popup_slider (self, widget, event_button):
+        if not event_button.button == 1:
+            return
+
         if not self.window.props.visible:
             _, _, area, _ = self.icon.get_geometry ()
             self.window.move (area.x - self.length, area.y)
