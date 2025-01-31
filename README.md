@@ -1,5 +1,6 @@
-xbacklight-tray
-==
+# xbacklight-tray
+
+![Image](https://github.com/user-attachments/assets/9c23953a-2be4-43f0-b0bb-0e5f5c9d6f58)
 
 A simple tray icon to adjust screen backlight brightness.
 
@@ -10,4 +11,3 @@ Based on [pmrv/brightnessicon](https://github.com/pmrv/brightnessicon) with a fe
 - Left click to activate
 - Right click for menu / quit
 - Some visuals
-
